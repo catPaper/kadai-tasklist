@@ -67,6 +67,7 @@ public class UpdateServlet extends HttpServlet {
 
             //エラーがあったら新規登録のフォームに戻る
             if(errors.size() > 0) {
+                em.close();
                 //フォームに初期値を設定、さらにエラーメッセージを送る
                 request.setAttribute("_token", _token);
                 request.setAttribute("task", t);
