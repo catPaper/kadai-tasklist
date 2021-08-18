@@ -1,0 +1,72 @@
+package models;
+
+import java.sql.Timestamp;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+/**
+ * tasksテーブルとのDTOになるクラス
+ * @author ryouta.osada
+ *
+ */
+@Entity
+@Table(name="tasks")
+public class Task {
+
+    /**
+     * 自動生成されるプライマリーキー
+     */
+    @Id
+    private Integer id;
+
+    /**
+     * タスク内容
+     */
+    private String content;
+
+    /**
+     * 作成日時
+     */
+    private Timestamp created_at;
+
+    /*
+     * 更新日時
+     */
+    private Timestamp updated_at;
+
+    //getter,setterの生成
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public Timestamp getCreated_at() {
+        return created_at;
+    }
+
+    public void setCreated_at(Timestamp created_at) {
+        this.created_at = created_at;
+    }
+
+    public Timestamp getUpdated_at() {
+        return updated_at;
+    }
+
+    public void setUpdated_at(Timestamp updated_at) {
+        this.updated_at = updated_at;
+    }
+
+}
