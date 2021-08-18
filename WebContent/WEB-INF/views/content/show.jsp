@@ -15,11 +15,11 @@
                         </tr>
                         <tr>
                             <th>作成日時：</th>
-                            <td><c:out value="${task.created_at}" /></td>
+                            <td><fmt:formatDate value="${task.created_at}" pattern="yyyy年MM月dd日 HH時mm分ss秒" /></td>
                         </tr>
                         <tr>
                             <th>更新日時：</th>
-                            <td><c:out value="${task.updated_at}" /></td>
+                            <td><fmt:formatDate value="${task.updated_at}" pattern="yyyy年MM月dd日 HH時mm分ss秒" /></td>
                         </tr>
                     </tbody>
                 </table>
