@@ -24,7 +24,6 @@
                     </tbody>
                 </table>
 
-                <p><a href="${pageContext.request.contextPath}/index">一覧に戻る</a>
                 <p><a href="${pageContext.request.contextPath}/edit?id=${task.id}">このタスクを編集する</a>
 
             </c:when>
@@ -32,5 +31,7 @@
                 <h2>お探しのデータは存在しません。</h2>
             </c:otherwise>
         </c:choose>
+
+        <p><a href="${pageContext.request.contextPath}/index">一覧に戻る</a>
     </c:param>
 </c:import>
