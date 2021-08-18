@@ -54,6 +54,7 @@ public class CreateServlet extends HttpServlet {
                 request.setAttribute("task", t);
                 request.setAttribute("errors", errors);
 
+                //newページへ遷移
                 RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/content/new.jsp");
                 rd.forward(request, response);
             }else {
@@ -64,6 +65,7 @@ public class CreateServlet extends HttpServlet {
                 em.getTransaction().commit();
                 em.close();
 
+                //indexページへリダイレクト
                 response.sendRedirect(request.getContextPath() + "/index");
             }
         }
