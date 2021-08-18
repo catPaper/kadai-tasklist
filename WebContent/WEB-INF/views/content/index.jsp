@@ -16,5 +16,7 @@
                 <c:set var="number" value="${number+1}" />
             </c:forEach>
         </ul>
+
+        <p><a href="${pageContext.request.contextPath}/new"><button>タスクの新規作成</button></a></p>
     </c:param>
 </c:import>

@@ -16,6 +16,7 @@ import utils.DBUtil;
 
 /**
  * データベースからタスクテーブルを全取得し、index.jspに渡し表示させるサーブレット
+ * @author ryouta.osada
  */
 @WebServlet("/index")
 public class IndexServlet extends HttpServlet {
