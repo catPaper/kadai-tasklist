@@ -40,7 +40,7 @@ public class UpdateServlet extends HttpServlet {
         if(_token != null && _token.equals(request.getSession().getId())) {
             EntityManager em = DBUtil.createEntityManager();
             //リクエストスコープからタスクのIDを取得して
-            //該当のIDのメッセージ1件のみをデータベースから取得
+            //該当のIDのタスク1件のみをデータベースから取得
             Task t = em.find(Task.class, Integer.parseInt(request.getParameter("id")));
 
             //編集可能な項目の数
