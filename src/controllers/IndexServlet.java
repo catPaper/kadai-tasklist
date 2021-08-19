@@ -38,6 +38,13 @@ public class IndexServlet extends HttpServlet {
         List<Task> tasks = em.createNamedQuery("getAllTasks",Task.class).getResultList();
         em.close();
 
+        //フラッシュメッセージがセッションスコープにセットされていたら
+        //リクエストスコープに保存（セッションスコープからは削除）
+        if(request.getSession().getAttribute("flush") != null) {
+            request.setAttribute("flush", request.getSession().getAttribute("flush"));
+            request.getSession().removeAttribute("flush");
+        }
+
         //requestにtaskのリストをセットし、index.jspを表示させる
         request.setAttribute("tasks", tasks);
         RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/content/index.jsp");

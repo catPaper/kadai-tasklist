@@ -2,6 +2,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:import url="../layout/app.jsp">
     <c:param name="content">
+        <%-- フラッシュメッセージの表示 --%>
+        <c:if test="${flush != null}">
+            <div id="flush_success">
+                <c:out value="${flush }" />
+            </div>
+        </c:if>
         <h2>タスク一覧</h2>
         <ul>
             <%-- numberはタスクに１から順番に番号をふるための変数 --%>
