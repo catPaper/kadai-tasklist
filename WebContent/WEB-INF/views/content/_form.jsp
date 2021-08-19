@@ -3,10 +3,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:if test="${errors != null}">
     <div id="flush_error">
-        入力内容にエラーがあります。<br>
+        <b>入力内容にエラーがあります。</b><br>
         <ul>
             <c:forEach var="error" items="${errors}">
-                <li><c:out value="${error}" /></li>
+                <li>・<c:out value="${error}" /></li>
             </c:forEach>
         </ul>
     </div>
