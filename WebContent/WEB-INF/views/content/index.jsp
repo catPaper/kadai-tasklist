@@ -18,6 +18,10 @@
                         <c:out value="${number}" />
                     </a>
                     - <c:out value="${task.content}" />
+                    <%-- 更新しているデータには[編集済み]を付与 --%>
+                    <c:if test="${task.created_at != task.updated_at }">
+                        &nbsp;[編集済み]
+                    </c:if>
                 </li>
                 <c:set var="number" value="${number+1}" />
             </c:forEach>
